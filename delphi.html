@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Delphi</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/delphi.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-xs-12">
+          <div class="jumbotron">
+            <h1>Delphi</h1>
+            <h3>Bahasa pemrograman delphi ini sintak dasarnya menggunakan bahasa Pascal (Object Pascal Oriented). Apabila kita sudah banyak mengenal bahasa Pascal kita tidak akan susah untuk mempelajari bahasa pemrograman delphi ini.</h3>
+          </div>
+        </div>
+        
+        <div class="col-xs-9">
+          <div id="divSatu">
+            <h4>1. Ini adalah source kode untuk membuat program hitung fotocopy.</h4>
+<pre class="pre-scrollable">
+        procedure TForm1.ryaClick(Sender: TObject);
+        begin
+        eharga.Text := '300';
+        end;
+
+        procedure TForm1.rtidakClick(Sender: TObject);
+        begin
+        eharga.Text := '500';
+        end;
+
+        procedure TForm1.bprosesClick(Sender: TObject);
+        var a,b,c,d,e : real;
+        begin
+        a := strtofloat(eharga.Text);
+        b := strtofloat(ejumlah.Text);
+
+        c := a * b;
+        e := 10/100 * c;
+
+        if b > 20 then
+        d := c - e
+        else
+        d := c;
+
+        if a = 500 then
+        d := c
+        else
+        d := c - e;
+
+        etotal.Text := floattostr(c);
+        ebayar.Text := floattostr(d);
+        end;
+
+        procedure TForm1.bkeluarClick(Sender: TObject);
+        begin
+        Application.Terminate;
+        end;
+
+        end.
+</pre>
+            <p>ini adalah contoh interfacenya :</p>
+            <pre class="text-center"><img src="img/delphi/del1.png"></pre>
+          </div>
+          <br>
+          <br>
+
+          <div id="divDua">
+            <h4>2. Ini adalah source kode untuk membuat Program Hitung Gaji Karyawan.</h4>
+<pre class="pre-scrollable">
+        procedure TForm1.ComboBox1Change(Sender: TObject);
+        begin
+        if combobox1.Text ='Manager' then
+        edit3.text :='3000000'
+        else if combobox1.Text ='Operator' then
+        edit3.Text :='2000000'
+        end;
+
+        procedure TForm1.CheckBox1Click(Sender: TObject);
+        begin
+        if checkbox1.Checked then
+        begin
+        Edit8.Text :='100000';
+        end
+        else
+        Edit8.Text :='0';
+        end;
+
+        procedure TForm1.CheckBox2Click(Sender: TObject);
+        begin
+        if checkbox2.Checked then
+        begin
+        Edit9.Text :='200000';
+        end
+        else
+        Edit9.Text :='0';
+        end;
+
+        procedure TForm1.CheckBox3Click(Sender: TObject);
+        begin
+        if checkbox3.Checked then
+        begin
+        Edit10.Text :='100000';
+        end
+        else
+        Edit10.Text :='0';
+        end;
+
+        procedure TForm1.RadioButton1Click(Sender: TObject);
+        begin
+        Edit7.Text := '50000';
+        end;
+
+        procedure TForm1.RadioButton2Click(Sender: TObject);
+        begin
+        Edit7.Text := '100000';
+        end;
+
+        procedure TForm1.Button1Click(Sender: TObject);
+        var gp,ut,keh,pen,kes,ht,bon,tg : Real;
+        begin
+        gp := StrToFloat(Edit3.Text);
+        ut := StrToFloat(Edit4.Text);
+        keh := StrToFloat(Edit5.Text);
+        pen := StrToFloat(Edit8.Text);
+        kes := StrToFloat(Edit9.Text);
+        ht := StrToFloat(Edit10.Text);
+        bon := StrToFloat(Edit7.Text);
+
+        tg := gp+(ut*keh)+pen+kes+ht+bon;
+
+        Edit6.Text := FloatToStr(tg);
+        end;
+
+        procedure TForm1.Edit11Change(Sender: TObject);
+        var tg,jams,pot : Real;
+        begin
+        tg := StrToFloat(Edit6.Text);
+        pot := StrToFloat(Edit11.Text);
+
+        jams :=  tg * pot/100;
+
+        Edit12.Text := FloatToStr(jams);
+        end;
+
+        procedure TForm1.Edit13Change(Sender: TObject);
+        var tg,jams,pot : Real;
+        begin
+        tg := StrToFloat(Edit6.Text);
+        pot := StrToFloat(Edit13.Text);
+
+        jams :=  tg * pot/100;
+
+        Edit14.Text := FloatToStr(jams);
+        end;
+
+        procedure TForm1.Button4Click(Sender: TObject);
+        var gb,tg,jams,ppn : Real;
+        begin
+        tg := StrToFloat(Edit6.Text);
+        jams := StrToFloat(Edit12.Text);
+        ppn := StrToFloat(Edit14.Text);
+
+        gb := tg-(jams+ppn);
+
+        Edit15.Text := FloatToStr(gb);
+        end;
+
+        procedure TForm1.Button2Click(Sender: TObject);
+        begin
+        Edit1.Text := '';
+        Edit2.Text := '';
+        Edit3.Text := '';
+        Edit4.Text := '';
+        Edit5.Text := '';
+        Edit6.Text := '';
+        Edit7.Text := '';
+        Edit8.Text := '';
+        Edit9.Text := '';
+        Edit10.Text := '';
+        Edit15.Text := '';
+        comboBox1.Text := '';
+        Edit1.SetFocus;
+        end;
+
+        procedure TForm1.Button3Click(Sender: TObject);
+        begin
+        Application.Terminate;
+        end;
+
+        end.
+</pre>
+            <p>ini adalah contoh interfacenya :</p>
+            <pre class="text-center"><img src="img/delphi/del2.png"></pre>
+          </div>
+          <br>
+          <br>
+
+          <div id="divTiga">
+            <h4>3. Ini adalah source kode untuk membuat Program Penjualan Barang.</h4>
+<pre class="pre-scrollable">
+          procedure TForm1.cmdisiClick(Sender: TObject);
+          begin
+          eitem.Text :='';
+          efaktur.Text := '';
+          Lsbarang.Clear;
+          Lsharga.Clear;
+          etotal.Text :='';
+          end;
+
+          procedure TForm1.cmdokClick(Sender: TObject);
+          var
+          inputnama : string;
+          inputharga : string;
+          i : integer;
+          j : integer;
+          harga : real;
+
+          begin
+
+          harga := 0;
+          j := 0;
+          j:= strtoint(eitem.Text);
+
+          if j <= 0 then
+          begin
+          showmessage('Data Tidak  boleh   lebih  kecil dari Nol');
+          exit;
+          end else
+          begin
+          for i := 1 to j do
+          begin
+          inputnama := inputbox('Input','Ketikan Nama Barang','');
+          inputharga := inputbox('Input','Ketikan Harga Barang','');
+          Lsbarang.Items.Add(inputnama) ;
+          Lsharga.Items.Add(inputharga);
+          harga := harga + strtofloat(inputharga);
+          end;
+          end;
+
+          etotal.Text := floattostr(harga);
+          end;
+
+          procedure TForm1.FormCreate(Sender: TObject);
+          begin
+          DateSeparator := '-';
+          ShortDateFormat := 'dd/mm/yyyy';
+          etanggal.Text := 'rabu ' + DateToStr(Date);
+          end;
+
+          procedure TForm1.cmdcloseClick(Sender: TObject);
+          begin
+          close;
+          end;
+
+          end.  
+</pre>
+            <p>ini adalah contoh interfacenya :</p>
+            <pre class="text-center"><img src="img/delphi/del3.png"></pre>
+          </div>
+          <br>
+          <br>
+
+          <div id="divEmpat">
+            <h4>4. Ini adalah source kode untuk membuat Program Pembayaran biaya kuliah.</h4>
+<pre class="pre-scrollable">
+          procedure TForm1.ComboBox1Change(Sender: TObject);
+          begin
+          if ComboBox1.Text='MI' then
+          edit3.Text :='1000000'
+          else if ComboBox1.Text='KA' then
+          edit3.Text :='950000'
+          else
+          edit3.Text :='0'
+          end;
+
+          procedure TForm1.RadioButton1Click(Sender: TObject);
+          begin
+          edit4.Text := '300000'
+          end;
+
+          procedure TForm1.RadioButton2Click(Sender: TObject);
+          begin
+          edit4.Text := '400000'
+          end;
+
+          procedure TForm1.RadioButton3Click(Sender: TObject);
+          begin
+          edit4.Text := '500000'
+          end;
+
+          procedure TForm1.RadioButton4Click(Sender: TObject);
+          begin
+          edit4.Text := '600000'
+          end;
+
+          procedure TForm1.Button2Click(Sender: TObject);
+          begin
+          Application.Terminate;
+          end;
+
+          procedure TForm1.Button1Click(Sender: TObject);
+          var a,b,c : real;
+          begin
+          a := strtofloat(edit3.Text);
+          b := strtofloat(edit4.Text);
+
+          c := a + b;
+
+          edit5.Text := floattostr(c);
+          end;
+
+          procedure TForm1.Edit6Change(Sender: TObject);
+          var a,b,c : real;
+          begin
+          a := strtofloat(edit6.Text);
+          b := strtofloat(edit5.Text);
+
+          c := a - b;
+
+          edit7.Text := floattostr(c);
+          end;
+
+          procedure TForm1.Edit7Change(Sender: TObject);
+          var a : real;
+          begin
+          a := strtofloat(edit7.Text);
+
+          if a > 0 then
+          edit8.text :='Lunas'
+          else if a < 0 then
+          edit8.Text := 'Belum Lunas';
+          if a = 0 then
+          edit8.text :='Lunas'
+          end;
+
+          end. 
+</pre>
+            <p>ini adalah contoh interfacenya :</p>
+            <pre class="text-center"><img src="img/delphi/del4.png"></pre>
+          </div>
+          <br>
+          <br>
+
+          <div id="divLima">
+            <h4>5. Ini adalah source kode untuk membuat Program Ungkapan Kata.</h4>
+<pre class="pre-scrollable">
+          procedure TForm1.LsbahasaClick(Sender: TObject);
+          begin
+          ebahasa.Text := Lsbahasa.Items[Lsbahasa.ItemIndex];
+          case Lsbahasa.ItemIndex of
+          0 : eucap.Text := 'aku cinta padamu';
+          1 : eucap.Text := 'holong rohangku tuho';
+          2 : eucap.Text := 'oma sidokhou';
+          3 : eucap.Text := 'wo ai ni';
+          4 : eucap.Text := 'i love you';
+          end;
+          case Lsbahasa.ItemIndex of
+          0 : ebahasa.Color := clBlue;
+          1 : ebahasa.Color := clRed;
+          2 : ebahasa.Color := clYellow;
+          3 : ebahasa.Color := clGreen;
+          4 : ebahasa.Color := clPurple;
+          end;
+          end;
+
+          procedure TForm1.Button1Click(Sender: TObject);
+          begin
+          Application.Terminate;
+          end;
+
+          end.  
+</pre>
+            <p>ini adalah contoh interfacenya :</p>
+            <pre class="text-center"><img src="img/delphi/del5.png"></pre>
+          </div>
+          <br>
+          <br>
+
+          <div id="divEnam">
+            <h4>6. Ini adalah source kode untuk membuat main menu/popup menu.</h4>
+<pre class="pre-scrollable">
+          procedure TForm1.Merah1Click(Sender: TObject);
+          begin
+          Form1.Color := clred;
+          end;
+
+          procedure TForm1.Biru2Click(Sender: TObject);
+          begin
+          Form1.Color := clblue;
+          end;
+
+          procedure TForm1.Kuning2Click(Sender: TObject);
+          begin
+          Form1.Color := clyellow;
+          end;
+
+          procedure TForm1.Hitam2Click(Sender: TObject);
+          begin
+          Form1.Color := clblack;
+          end;
+
+          procedure TForm1.KeluarProgram1Click(Sender: TObject);
+          begin
+          Application.Terminate;
+          end;
+
+          procedure TForm1.Biru1Click(Sender: TObject);
+          begin
+          Form1.Color := clblue;
+          end;
+
+          procedure TForm1.Merah2Click(Sender: TObject);
+          begin
+          Form1.Color := clred;
+          end;
+
+          procedure TForm1.Kuning1Click(Sender: TObject);
+          begin
+          Form1.Color := clyellow;
+          end;
+
+          procedure TForm1.Hitam1Click(Sender: TObject);
+          begin
+          Form1.Color := clblack;
+          end;
+
+          procedure TForm1.Exit1Click(Sender: TObject);
+          begin
+          Application.Terminate;
+          end;
+
+          procedure TForm1.Button6Click(Sender: TObject);
+          begin
+          Application.Terminate;
+          end;
+
+          procedure TForm1.Button1Click(Sender: TObject);
+          begin
+          Form1.Color := clred;
+          end;
+
+          procedure TForm1.Button2Click(Sender: TObject);
+          begin
+          Form1.Color := clblue;
+          end;
+
+          procedure TForm1.Button3Click(Sender: TObject);
+          begin
+          Form1.Color := clyellow;
+          end;
+
+          procedure TForm1.Button4Click(Sender: TObject);
+          begin
+          Form1.Color := clblack;
+          end;
+
+          procedure TForm1.Button5Click(Sender: TObject);
+          begin
+          Form1.Color := clbtnface;
+          end;
+
+          end.  
+</pre>
+            <p>ini adalah contoh interfacenya :</p>
+            <pre class="text-center"><img src="img/delphi/del6.png"></pre>
+          </div>
+          <br>
+          <br>
+
+          <div id="divTujuh">
+            <h4>7. Ini adalah source kode untuk membuat Program Toko Handphone.</h4>
+<pre class="pre-scrollable">
+          procedure TForm1.ComboBox1Change(Sender: TObject);
+          begin
+          if combobox1.Text ='N73' then
+          begin
+                  edit1.text :='Nokia N73';
+                  edit2.Text :='1200000'
+          end
+          else
+                  begin
+                  edit1.text :='Nokia N95';
+                  edit2.Text :='1500000'
+          end
+          end;
+
+          procedure TForm1.RadioButton1Click(Sender: TObject);
+          begin
+          If RadioButton1.Checked = true then
+                  edit4.Text :='30000'
+          end;
+
+          procedure TForm1.RadioButton2Click(Sender: TObject);
+          begin
+          If RadioButton2.Checked = true then
+          edit4.Text := '20000'
+          end;
+
+          procedure TForm1.CheckBox1Click(Sender: TObject);
+          begin
+          if checkbox1.Checked then
+                  edit3.Text := '25000'
+          end;
+
+          procedure TForm1.CheckBox2Click(Sender: TObject);
+          begin
+          if checkbox2.Checked then
+                  edit3.Text := '75000'
+          end;
+
+          procedure TForm1.Edit5Change(Sender: TObject);
+          var
+          nilai1:real;
+          nilai2:real;
+          nilai3:real;
+          nilai4:real;
+          nilai5:real;
+          begin
+          nilai1:=strtoint(edit5.text);
+          nilai2:=strtoint(edit2.text);
+          nilai3:=strtoint(edit3.text);
+          nilai4:=strtoint(edit4.text);
+          nilai5:=(nilai1 * nilai2) + nilai3 + nilai4;
+          edit6.Text:=floattostr(nilai5);
+          end;
+
+          procedure TForm1.Edit7Change(Sender: TObject);
+          var
+          a:real;
+          b:real;
+          c:real;
+          begin
+          a:=strtoint(edit7.Text);
+          b:=strtoint(edit6.Text);
+          c:=a-b;
+          edit8.Text:=floattostr(c);
+          end;
+
+          procedure TForm1.Button2Click(Sender: TObject);
+          begin
+          Application.Terminate;
+          end;
+
+          procedure TForm1.Button1Click(Sender: TObject);
+          begin
+
+          edit8.Text:='';
+          edit7.Text:='';
+          combobox1.Text:='';
+          checkbox1.Checked:=false;
+          checkbox2.Checked:=false;
+          radiobutton1.Checked:=false;
+          radiobutton2.Checked:=false;
+          end;
+
+          procedure TForm1.Button3Click(Sender: TObject);
+          var
+          a:real;
+          b:real;
+          c:real;
+          begin
+          a:=25000;
+          b:=75000;
+          c:=a+b;
+
+                  edit3.Text:=floattostr(c);
+
+          end;
+
+          end. 
+</pre>
+            <p>ini adalah contoh interfacenya :</p>
+            <pre class="text-center"><img src="img/delphi/del8.png"></pre>
+          </div>
+          <br>
+          <br>
+
+          <div id="divDelapan">  
+            <h4>8. ini adalah tutorial membuat aplikasi database barang dengan delphi dan mengkoneksikannya pada microsoft acces.</h4>
+<pre>
+    Langkah – langkah
+    1.  Membuat folder terlebih dahulu yang nantinya untuk menyimpan aplikasi delphi dan Microsoft accesnya.
+        • nama folder yang saya buat di sini (data perpustakaan)
+        • direktori atau tempat penyimpanannya D:\AMIK\pemrograman delphi\data perpustakaan
+
+    terserah kalian akan memberi nama foldernya apa dan menyimpan foldernya dimana..
+    misalkan untuk lebih gampang : 
+        • nama folder (data perpustakaan)
+        • direktori atau tempat penyimpanannya D:\data perpustakaan
+
+    2.  Membuat databasenya dengan menggunakan Microsoft acces.
+    Cara nya :
+        • Buka Microsoft acces
+        • Pilih blank desktop database
+        • Tulis file name misalkan (perpustakaan.accdb) 
+        • simpan pada folder yang sudah anda buat tadi (usahakan satu folder dengan aplikasi delphi nya) lalu pilih create
+        <img src="img/delphi/del9.png">
+        • Lalu Membuat designnya dengan mengklik kanan pada table pilih design view dan beri judul misalkan (buku).
+        Seperti gambar di bawah ini.!!
+        <img src="img/delphi/del10.png">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Field name</th>
+          <th>Field size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Kode</td>
+          <td>03</td>
+        </tr>
+        <tr>
+          <td>Judul</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Penerbit</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Pengarang</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Tahun_Terbit</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Stock</td>
+          <td>byte</td>
+        </tr>
+      </tbody>
+    </table>
+        • Lalu save. (ctrl+s)
+
+    3.  Membuat design interfacenya pada delphi.
+    Tool yang di pakai :
+        • Label
+        • Edit
+        • Button
+        • Dbgrid
+        <img src="img/delphi/del11.png">
+        • ADOTable
+        <img src="img/delphi/del12.png">
+        • ADOConnection
+        <img src="img/delphi/del13.png">
+        • Data source
+        <img src="img/delphi/del14.png">
+        Tampilan yang di inginkan :
+        <img src="img/delphi/del15.png">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Properties</th>
+          <th>Nama</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Edit1</td>
+          <td>Name</td>
+          <td>Ekode</td>
+        </tr>
+        <tr>
+          <td>Edit2</td>
+          <td>Name</td>
+          <td>Ejudul</td>
+        </tr>
+        <tr>
+          <td>Edit3</td>
+          <td>Name</td>
+          <td>Epenerbit</td>
+        </tr>
+        <tr>
+          <td>Edit4</td>
+          <td>Name</td>
+          <td>Epengarang</td>
+        </tr>
+        <tr>
+          <td>Edit5</td>
+          <td>Name</td>
+          <td>Etahun</td>
+        </tr>
+        <tr>
+          <td>Edit6</td>
+          <td>Name</td>
+          <td>Estock</td>
+        </tr>
+        <tr>
+          <td>Edit7</td>
+          <td>Name</td>
+          <td>Ecari</td>
+        </tr>
+        <tr>
+          <td>Button1</td>
+          <td>Name</td>
+          <td>Bcari</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Caption</td>
+          <td>Cari</td>
+        </tr>
+        <tr>
+          <td>Button2</td>
+          <td>Name</td>
+          <td>Bubah</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Caption</td>
+          <td>Ubah</td>
+        </tr>
+        <tr>
+          <td>Button3</td>
+          <td>Name</td>
+          <td>Bhapus</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Caption</td>
+          <td>Hapus</td>
+        </tr>
+        <tr>
+          <td>Button4</td>
+          <td>Name</td>
+          <td>Bsimpan</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Caption</td>
+          <td>Simpan</td>
+        </tr>
+      </tbody>
+    </table>
+    4.  Cara menghubungkan delphi dan database (Microsoft acces).
+        • Kembali ke form delphi, Klik pada tool adoconnection, lalu pada properties pilih connection string, klik tanda seperti ini<img src="img/delphi/del24.png">   , kemudian akan muncul table seperti di bawah !!
+        <img src="img/delphi/del16.png">
+        • Lalu klik build – pilih Microsoft office 12.0 acces database engine OLE DB provider – lalu next
+        <img src="img/delphi/del17.png">
+        • Kemudian akan muncul table
+        <img src="img/delphi/del18.png">
+    Tulis direktori database nya pada kolom datasource, 
+    untuk contoh direktori yang saya simpan yaitu (D:\AMIK\pemrograman delphi\data perpustakaan) dan tinggal di tambah di belakangnya \perpustakaan.accdb
+
+    Sehingga menjadi seperti ini D:\AMIK\pemrograman delphi\data perpustakaan\perpustakaan.accdb
+
+    Dan kalau untuk yang anda buat menjadi seperti ini D:\ data perpustakaan\perpustakaan.accdb
+
+    kemudian pilih test connection,
+    Jika muncul test connection succesed maka test koneksi sudah berhasil lalu pilih ok kemudian pilih ok lagi.
+    Jika terjadi eror maka ada kesalahan pada penulisan direktorinya.
+
+        • Kembali ke form Delphi, masih dalam tool adoconnection ubah pada properties
+          1)  pilih login prompt ubah menjadi false.
+          2)  pilih connected ubah menjadi true.
+        ket: lakukan secara berurutan
+        seperti gambar.!!
+        <img src="img/delphi/del19.png">
+        • kembali kembali ke form klik pada tool adotable1 pada properties
+          1)  pilih connection ubah menjadi adoconnection1
+          2)  pilih tablename ubah menjadi buku
+          3)  pilih active ubah menjadi true
+        ket: lakukan secara berurutan
+        <img src="img/delphi/del20.png">
+        • kembali ke form klik pada tool datasource1 pada properties pilih dataset ubah menjadi adotable1
+        <img src="img/delphi/del21.png">
+        • kembali ke form klik pada tool dbgrid1 pada properties pilih datasource ubah menjadi datasource1
+        <img src="img/delphi/del22.png">
+    5.  Memberi kodingan pada setiap commandbutton.
+    Ket : cara menginput kodingannya yaitu dengan mendouble klik setiap button yang ingin di beri kodingan 
+        • Button (simpan)
+    procedure TForm1.bsimpanClick(Sender: TObject);
+    begin
+    ADOTABLE1.Insert;
+    ADOTABLE1.FIELDBYNAME('Kode').ASSTRING := ekode.TEXT;
+    ADOTABLE1.fieldByname('Judul').AsString := ejudul.text;
+    adotable1.fieldByname('Penerbit').AsString := epenerbit.text;
+    adotable1.fieldByname('Pengarang').AsString := epengarang.text;
+    adotable1.fieldByname('Tahun_Terbit').AsString := etahun.text;
+    adotable1.fieldByname('Stock').AsInteger := strtoint(estock.text);
+    adotable1.Post;
+
+    ekode.Clear;
+    ejudul.Clear;
+    epenerbit.Clear;
+    epengarang.Clear;
+    etahun.Clear;
+    estock.Clear;
+    ekode.SetFocus;
+    end;
+
+        • Button (hapus)
+    procedure TForm1.bhapusClick(Sender: TObject);
+    begin
+    adotable1.Delete;
+    end;
+
+        • Button (ubah)
+    procedure TForm1.bubahClick(Sender: TObject);
+    begin
+    ADOTABLE1.Edit;
+    ADOTABLE1.FIELDBYNAME('Kode').ASSTRING := ekode.TEXT;
+    ADOTABLE1.fieldByname('Judul').AsString := ejudul.text;
+    adotable1.fieldByname('Penerbit').AsString := epenerbit.text;
+    adotable1.fieldByname('Pengarang').AsString := epengarang.text;
+    adotable1.fieldByname('Tahun_Terbit').AsString := etahun.text;
+    adotable1.fieldByname('Stock').AsInteger := strtoint(estock.text);
+    adotable1.Post;
+    end;
+
+        • Button (cari)
+    procedure TForm1.bcariClick(Sender: TObject);
+    begin
+    if adotable1.Locate('Kode',ecari.Text,[])then
+    begin
+    ekode.Text := adotable1.fieldByname('Kode').AsString;
+    ejudul.Text := adotable1.fieldByname('Judul').AsString;
+    epenerbit.Text := adotable1.fieldByname('Penerbit').AsString;
+    epengarang.Text := adotable1.fieldByname('Pengarang').AsString;
+    etahun.Text := adotable1.fieldByname('Tahun_Terbit').AsString;
+    estock.Text := adotable1.fieldByname('Stock').AsString;
+    end
+    else
+    if not adotable1.Locate('Kode',ecari.Text,[])then
+    begin
+    showmessage ('data tidak di temukan');
+    end;
+    end;
+
+    end.
+
+    6.  Silahkan anda run untuk membuktikan apakah semuanya berfungsi.
+    <img src="img/delphi/del23.png">
+    Ket :
+        • Tombol simpan untuk menyimpan.
+        • Tombol ubah untuk mengubah data (sebelumnya pilih dulu data yang akan di ubah dengan menginput kode lalu klik tombol cari, setelah data muncul lalu anda bisa mengubahnya dan kemudian klik tombol ubah jangan simpan).
+        • Tombol hapus untuk menghapus data (pilih dulu data yang akan di hapus dengan mengclick symbol panah yang ada di sebelah kiri, setelah itu klik tombol hapus).
+        • Tombol cari untuk mencari data (dengan menginput kode pada kolom cari terlebih dahulu).
+</pre>     
+          </div>
+        </div>
+
+        <div class="col-xs-3">
+          <nav id="mainNavbar">
+            <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="200">
+              <li class="active"><a href="#divSatu">Program Hitung Fotocopy</a></li>
+              <li><a href="#divDua">Program Hitung Gaji</a></li>
+              <li><a href="#divTiga">Program Penjualan Barang</a></li>
+              <li><a href="#divEmpat">Program Pembayaran</a></li>
+              <li><a href="#divLima">Program Ungkapan Kata</a></li>
+              <li><a href="#divEnam">main menu/popup menu</a></li>
+              <li><a href="#divTujuh">Program Toko Handphone</a></li>
+              <li><a href="#divDelapan">Database</a></li>
+              <!-- <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                  Database (acces) <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">                
+                  <li><a href="#divDat1">koneksi database</a></li>
+                  <li><a href="#divDat2">menampilkan di quickreport</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </nav>
+        </div>
+        
+      </div>
+    </div>
+    <footer>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="coba2">&copy; copyright 2017 | built <i class="glyphicon glyphicon-user"></i> by. <a href="http://instagram.com/apip_kurniawan">apip kurniawan</a>.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('body').scrollspy({
+          target: '#mainNavbar',
+          offset: 10
+        });
+      });
+    </script>
+  </body>
+</html>

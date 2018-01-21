@@ -1,0 +1,44 @@
+body {
+  position: relative;
+  background-color: #330000;
+}
+.affix {
+  top: 20px;
+  position: fixed;
+}
+p {
+	text-align: center;
+	font-weight: bold;
+	color: #009933;
+}
+.jumbotron {
+	background-color: #ffcc00;
+}
+a {
+	font-size: 16px;
+	font-family: georgia;
+	font-weight: bold;
+}
+h4 {
+	color: #009933;
+	font-weight: bold;
+	text-align: center;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  background-color: #55552b;
+  padding-top: 10px;
+}
+footer p {
+  color: #aaa;
+  font-size: 1.2em;
+}
+footer p i {
+  color: salmon;
+}
+.coba2 {
+margin-top: 25px;
+}

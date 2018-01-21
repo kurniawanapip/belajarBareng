@@ -1,0 +1,12 @@
+body {
+	background-image : url('../img/small.png');
+}
+p {
+	text-align: justify;
+}
+li {
+	text-align: justify;
+}
+h1 {
+	text-align: center;
+}

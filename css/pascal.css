@@ -1,0 +1,24 @@
+.jumbotron {
+  background-color: #996600;
+} 
+body {
+	background-image: url('../img/we.png');
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  background-color: #55552b;
+  padding-top: 10px;
+}
+footer p {
+  color: #aaa;
+  font-size: 1.2em;
+}
+footer p i {
+  color: salmon;
+}
+.coba {
+margin-top: 25px;
+}
