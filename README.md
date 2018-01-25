@@ -11,6 +11,5 @@ web ini berisi tentang materi-materi tentang dekstop programming mulai dari pasc
 <img src="bb2.png">
 <img src="bb3.png">
 <img src="bb4.png">
-<img src="bb5.png">
-<img src="bb6.png">
+<img src="bb5.png">  <img src="bb6.png">
 <img src="bb7.png">
